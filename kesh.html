@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Market Segmentation</title>
+</head>
+<body>
+    <h1>Market Segmentation Results</h1>
+    <table border="1">
+        <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Income</th>
+            <th>Cluster</th>
+        </tr>
+        {% for index, row in data.iterrows() %}
+        <tr>
+            <td>{{ row['Customer ID'] }}</td>
+            <td>{{ row['Name'] }}</td>
+            <td>{{ row['Age'] }}</td>
+            <td>{{ row['Income'] }}</td>
+            <td>{{ row['Cluster'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
